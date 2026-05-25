@@ -1,5 +1,4 @@
 /* RESET */
-
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +6,14 @@
 }
 
 /* BODY */
-
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: peachpuff;
-  color: blue;
+  color: #222;
 }
 
 /* ACCESSIBILITY */
-
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -32,30 +29,28 @@ body {
   top: 10px;
 }
 
-/* HEADER */
-
+/* HERO */
 .hero {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("food-bg.jpg");
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("food-bg.jpg");
 
   background-size: cover;
   background-position: center;
-
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
 }
-s
 
-/* NAVIGATION */
-
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 20px 10%;
+  position: relative;
 }
 
 .logo {
@@ -63,25 +58,48 @@ s
   font-size: 2rem;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+/* DROPDOWN MENU (FIXED to match HTML) */
+.nav-toggle {
+  display: none;
 }
 
-.nav-links a {
+.dropdown-btn {
   color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* hidden by default */
+.dropdown-menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  right: 10%;
+  top: 70px;
+
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 150px;
+}
+
+.dropdown-menu li {
+  margin: 10px 0;
+}
+
+.dropdown-menu a {
   text-decoration: none;
+  color: #222;
   font-weight: bold;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  text-decoration: underline;
+/* show menu when checked */
+.nav-toggle:checked ~ .dropdown-menu {
+  display: block;
 }
 
 /* HERO CONTENT */
-
 .hero-content {
   flex: 1;
 
@@ -92,12 +110,11 @@ s
 
   text-align: center;
   color: white;
-
   padding: 20px;
 }
 
 .hero-content h2 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
@@ -108,17 +125,12 @@ s
 }
 
 /* BUTTON */
-
 .btn {
   display: inline-block;
-
   background: #ff5c7a;
   color: white;
-
   padding: 15px 30px;
-
   border-radius: 30px;
-
   text-decoration: none;
   font-weight: bold;
 }
@@ -128,17 +140,14 @@ s
   background: #e84767;
 }
 
-/* ABOUT SECTION */
-
+/* ABOUT */
 .about-section {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 50px;
 
   padding: 80px 10%;
-
   flex-wrap: wrap;
 }
 
@@ -163,13 +172,7 @@ s
   max-width: 100%;
 }
 
-figcaption {
-  margin-top: 10px;
-  color: #666;
-}
-
-/* MENU SECTION */
-
+/* MENU */
 .menu-section {
   padding: 80px 5%;
 }
@@ -187,21 +190,14 @@ figcaption {
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
   gap: 30px;
 }
 
-/* MENU CARD */
-
 .menu-card {
   background: white;
-
   border-radius: 20px;
-
   overflow: hidden;
-
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
   transition: transform 0.3s;
 }
 
@@ -219,29 +215,14 @@ figcaption {
   padding: 20px;
 }
 
-.card-content h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-.card-content p {
-  margin-bottom: 20px;
-}
-
-/* BUTTONS */
-
+/* BUTTON */
 button {
   background: #ff5c7a;
   color: white;
-
   border: none;
-
   padding: 12px 25px;
-
   border-radius: 25px;
-
   cursor: pointer;
-
   font-weight: bold;
 }
 
@@ -251,20 +232,11 @@ button:focus {
 }
 
 /* CONTACT */
-
 .contact-section {
   background: #ff5c7a;
-
   color: white;
-
   text-align: center;
-
   padding: 70px 20px;
-}
-
-.contact-section h2 {
-  margin-bottom: 20px;
-  font-size: 2.5rem;
 }
 
 .contact-section a {
@@ -273,13 +245,11 @@ button:focus {
   text-decoration: none;
 }
 
-.contact-section a:hover,
-.contact-section a:focus {
+.contact-section a:hover {
   text-decoration: underline;
 }
 
 /* FOOTER */
-
 footer {
   background: #222;
   color: white;
@@ -288,94 +258,23 @@ footer {
 }
 
 /* =========================
-   RESPONSIVENESS (Mobile First)
+   RESPONSIVE FIXES
    ========================= */
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.hero-content h2 {
-  font-size: 1.8rem;
-  text-align: center;
-}
-
-.container {
-  width: 100%;
-  padding: 10px;
-}
-
-/* =========================
-   SMALL DEVICES (phones ≥480px)
-   ========================= */
-@media (min-width: 480px) {
-  .hero-content h2 {
-    font-size: 2rem;
-  }
-
-  .nav-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-/* =========================
-   TABLETS (≥768px)
-   ========================= */
+/* Tablets */
 @media (min-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .hero-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
-  .nav-links {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .container {
-    width: 90%;
-    margin: auto;
+  .navbar {
+    padding: 20px 10%;
   }
 }
 
-/* =========================
-   LAPTOPS (≥1024px)
-   ========================= */
+/* Laptops */
 @media (min-width: 1024px) {
   .hero-content h2 {
-    font-size: 3rem;
-  }
-
-  .container {
-    width: 85%;
-  }
-}
-
-/* =========================
-   LARGE SCREENS (≥1440px)
-   ========================= */
-@media (min-width: 1440px) {
-  .hero-content h2 {
     font-size: 3.5rem;
-  }
-
-  .container {
-    width: 75%;
   }
 }
