@@ -273,6 +273,118 @@ button:focus {
   text-decoration: underline;
 }
 
+/* =====================================================
+   🍽️ ORDER SYSTEM STYLES (ADDED - NO MODIFICATIONS ABOVE)
+===================================================== */
+
+/* ORDER HEADER */
+.order-header {
+  background: #ff5c7a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ORDER CONTAINER */
+.order-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* PRODUCT */
+.order-product {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.order-product img {
+  width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* EXTRAS */
+.order-extras {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.order-extras label {
+  display: block;
+  margin: 8px 0;
+}
+
+/* FORM */
+.order-form {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+  display: block;
+  text-align: center;
+  background: #25d366;
+  color: white;
+  padding: 14px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .order-product {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .order-product img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
 /* FOOTER */
 footer {
   background: #222;

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Order Jollof Rice - Alexa's Kitchen</title>
+    <link rel="icon" type="image/x-icon" href="images/alexa_logo.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="order-header">
+      <a href="index.html" class="back-btn">← Back </a>
+      <h1>Jollof Rice Order</h1>
+    </header>
+
+    <main class="order-container">
+      <!-- FOOD IMAGE + DESCRIPTION -->
+      <section class="order-product">
+        <img src="jollof.jpg" alt="Nigerian Jollof Rice" />
+
+        <div>
+          <h2>Smoky Nigerian Jollof Rice</h2>
+          <p>
+            Rich, spicy and flavorful jollof rice cooked with tomato stew,
+            pepper blend and seasoning.
+          </p>
+
+          <h3>Price: ₦3,500</h3>
+        </div>
+      </section>
+
+      <!-- EXTRAS -->
+      <section class="order-extras">
+        <h2>Add Extras</h2>
+
+        <label><input type="checkbox" /> Chicken (+₦1,500)</label><br />
+        <label><input type="checkbox" /> Beef (+₦1,200)</label><br />
+        <label><input type="checkbox" /> Fried Plantain (+₦800)</label><br />
+        <label><input type="checkbox" /> Coleslaw (+₦600)</label><br />
+      </section>
+
+      <!-- ORDER FORM -->
+      <section class="order-form">
+        <h2>Place Your Order</h2>
+
+        <form>
+          <label>
+            Full Name:
+            <input type="text" required />
+          </label>
+
+          <label>
+            Phone Number:
+            <input type="tel" required />
+          </label>
+
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" />
+          </label>
+
+          <label>
+            Delivery Address:
+            <textarea required></textarea>
+          </label>
+
+          <label>
+            Order Notes:
+            <textarea placeholder="e.g. less pepper, extra spicy..."></textarea>
+          </label>
+
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Alexa's Kitchen. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
