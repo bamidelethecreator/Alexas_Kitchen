@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
       name="description"
-      content="Alexa's Kitchen - Delicious homemade Nigerian meals and pasta specials."
-    />
+      content="Alexa's Kitchen - Delicious homemade Nigerian meals and pasta specials." />
 
     <title>Alexa's Kitchen</title>
 
@@ -15,24 +15,31 @@
 
   <body>
     <!-- SKIP LINK -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link"> Skip to main content </a>
 
     <!-- HEADER -->
     <header class="hero">
+      <!-- NAVIGATION -->
       <nav class="navbar" aria-label="Main Navigation">
-        <h1 class="logo">Alexa's Kitchen</h1>
+        <!-- LOGO / BRAND -->
+        <a href="#" class="logo-container">
+          <img
+            src="Images/alexa_logo.png"
+            alt="Alexa's Kitchen Logo"
+            class="logo-image" />
 
+          <h1 class="logo">Alexa's Kitchen</h1>
+        </a>
+
+        <!-- MOBILE NAVIGATION -->
         <div class="nav-dropdown">
           <input
             type="checkbox"
             id="nav-toggle"
             class="nav-toggle"
-            aria-label="Toggle navigation menu"
-          />
+            aria-label="Toggle navigation menu" />
 
-          <label for="nav-toggle" class="dropdown-btn">
-            ☰ Menu
-          </label>
+          <label for="nav-toggle" class="dropdown-btn"> ☰ Menu </label>
 
           <ul class="dropdown-menu">
             <li><a href="#menu">Menu</a></li>
@@ -42,18 +49,19 @@
         </div>
       </nav>
 
+      <!-- HERO CONTENT -->
       <section class="hero-content" aria-labelledby="hero-title">
         <h2 id="hero-title">Delicious Homemade Meals</h2>
 
         <p>Freshly prepared Nigerian dishes made with love and flavor.</p>
 
-        <a href="#menu" class="btn">Explore Menu</a>
+        <a href="#menu" class="btn"> Explore Menu </a>
       </section>
     </header>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main id="main-content">
-      <!-- ABOUT -->
+      <!-- ABOUT SECTION -->
       <section id="about" class="about-section" aria-labelledby="about-title">
         <article class="about-text">
           <h2 id="about-title">About Alexa's Kitchen</h2>
@@ -72,89 +80,136 @@
         <figure class="about-image">
           <img
             src="Images/body-image.png"
-            alt="Cartoon chef representing Alexa's Kitchen"
-          />
+            alt="Cartoon chef representing Alexa's Kitchen" />
+
           <figcaption>Homemade meals served with care.</figcaption>
         </figure>
       </section>
 
-      <!-- MENU -->
+      <!-- MENU SECTION -->
       <section id="menu" class="menu-section" aria-labelledby="menu-title">
         <header class="section-header">
           <h2 id="menu-title">Our Menu</h2>
+
           <p>Explore our delicious food selections.</p>
         </header>
 
+        <!-- MENU GRID -->
         <div class="menu-grid">
+          <!-- MENU ITEM -->
           <article class="menu-card">
             <img src="jollof.jpg" alt="Plate of Nigerian jollof rice" />
+
             <div class="card-content">
               <h3>Jollof Rice</h3>
-              <p>Smoky Nigerian jollof rice cooked with rich spices and flavor.</p>
-              <button type="button" aria-label="Order Jollof Rice">Order Now</button>
+
+              <p>
+                Smoky Nigerian jollof rice cooked with rich spices and flavor.
+              </p>
+
+              <button type="button" aria-label="Order Jollof Rice">
+                Order Now
+              </button>
             </div>
           </article>
 
+          <!-- MENU ITEM -->
           <article class="menu-card">
-            <img src="friedrice.jpg" alt="Plate of fried rice with vegetables" />
+            <img
+              src="friedrice.jpg"
+              alt="Plate of fried rice with vegetables" />
+
             <div class="card-content">
               <h3>Fried Rice</h3>
+
               <p>Flavorful fried rice mixed with vegetables and seasonings.</p>
-              <button type="button" aria-label="Order Fried Rice">Order Now</button>
+
+              <button type="button" aria-label="Order Fried Rice">
+                Order Now
+              </button>
             </div>
           </article>
 
+          <!-- MENU ITEM -->
           <article class="menu-card">
             <img src="creamypasta.jpg" alt="Creamy pasta served in a bowl" />
+
             <div class="card-content">
               <h3>Creamy Pasta</h3>
-              <p>Rich creamy pasta prepared with delicious sauce and seasoning.</p>
-              <button type="button" aria-label="Order Creamy Pasta">Order Now</button>
+
+              <p>
+                Rich creamy pasta prepared with delicious sauce and seasoning.
+              </p>
+
+              <button type="button" aria-label="Order Creamy Pasta">
+                Order Now
+              </button>
             </div>
           </article>
 
+          <!-- MENU ITEM -->
           <article class="menu-card">
             <img src="shawarma.jpg" alt="Shawarma wrap with creamy filling" />
+
             <div class="card-content">
               <h3>Shawarma</h3>
+
               <p>Creamy and spicy shawarma packed with tasty fillings.</p>
-              <button type="button" aria-label="Order Shawarma">Order Now</button>
+
+              <button type="button" aria-label="Order Shawarma">
+                Order Now
+              </button>
             </div>
           </article>
 
+          <!-- MENU ITEM -->
           <article class="menu-card">
             <img src="ofada.jpg" alt="Ofada rice served with spicy stew" />
+
             <div class="card-content">
               <h3>Ofada Rice & Stew</h3>
+
               <p>Traditional Ofada rice served with spicy native sauce.</p>
-              <button type="button" aria-label="Order Ofada Rice and Stew">Order Now</button>
+
+              <button type="button" aria-label="Order Ofada Rice and Stew">
+                Order Now
+              </button>
             </div>
           </article>
 
+          <!-- MENU ITEM -->
           <article class="menu-card">
             <img src="gizdodo.jpg" alt="Gizdodo with plantain and gizzard" />
+
             <div class="card-content">
               <h3>Gizdodo</h3>
+
               <p>Spicy combination of fried plantain and tasty gizzard.</p>
-              <button type="button" aria-label="Order Gizdodo">Order Now</button>
+
+              <button type="button" aria-label="Order Gizdodo">
+                Order Now
+              </button>
             </div>
           </article>
         </div>
       </section>
     </main>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+    <!-- CONTACT SECTION -->
+    <section
+      id="contact"
+      class="contact-section"
+      aria-labelledby="contact-title">
       <h2 id="contact-title">Contact Us</h2>
+
       <p>Place your orders through Instagram.</p>
 
       <address>
         <a
           href="https://instagram.com/Alexaskitchen__"
           target="_blank"
-          rel="noopener noreferrer"
-        >
-          @Alexaskitchen_
+          rel="noopener noreferrer">
+          @Alexaskitchen__
         </a>
       </address>
     </section>

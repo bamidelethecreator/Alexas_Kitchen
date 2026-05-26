@@ -32,8 +32,7 @@ body {
 /* HERO */
 .hero {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("food-bg.jpg");
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("food-bg.jpg");
 
   background-size: cover;
   background-position: center;
@@ -49,16 +48,34 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 10%;
+  padding: 20px 8%;
   position: relative;
 }
 
-.logo {
-  color: white;
-  font-size: 2rem;
+/* LOGO */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  text-decoration: none;
 }
 
-/* DROPDOWN MENU (FIXED to match HTML) */
+.logo-image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+.logo {
+  color: peachpuff;
+  font-size: 1.8rem;
+}
+
+/* DROPDOWN MENU */
+.nav-dropdown {
+  position: relative;
+}
+
 .nav-toggle {
   display: none;
 }
@@ -70,18 +87,20 @@ body {
   user-select: none;
 }
 
-/* hidden by default */
+/* hidden menu */
 .dropdown-menu {
   list-style: none;
   display: none;
   position: absolute;
-  right: 10%;
-  top: 70px;
+  right: 0;
+  top: 50px;
 
   background: white;
   padding: 15px;
   border-radius: 10px;
-  min-width: 150px;
+  min-width: 160px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-menu li {
@@ -90,11 +109,11 @@ body {
 
 .dropdown-menu a {
   text-decoration: none;
-  color: #222;
+  color: crimson;
   font-weight: bold;
 }
 
-/* show menu when checked */
+/* show menu */
 .nav-toggle:checked ~ .dropdown-menu {
   display: block;
 }
@@ -115,12 +134,12 @@ body {
 
 .hero-content h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
   max-width: 600px;
 }
 
@@ -129,15 +148,17 @@ body {
   display: inline-block;
   background: #ff5c7a;
   color: white;
-  padding: 15px 30px;
+  padding: 14px 28px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .btn:hover,
 .btn:focus {
   background: #e84767;
+  transform: scale(1.05);
 }
 
 /* ABOUT */
@@ -145,21 +166,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
 
-  padding: 80px 10%;
+  padding: 80px 8%;
   flex-wrap: wrap;
 }
 
 .about-text {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
 }
 
 .about-text h2 {
   color: #ff5c7a;
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .about-image {
@@ -168,67 +189,70 @@ body {
 }
 
 .about-image img {
-  width: 300px;
+  width: 280px;
   max-width: 100%;
 }
 
 /* MENU */
 .menu-section {
-  padding: 80px 5%;
+  padding: 80px 6%;
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .section-header h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #ff5c7a;
 }
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .menu-card {
   background: white;
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .menu-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 .menu-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
 }
 
 .card-content {
-  padding: 20px;
+  padding: 18px;
 }
 
-/* BUTTON */
+/* BUTTON (MENU) */
 button {
   background: #ff5c7a;
   color: white;
   border: none;
-  padding: 12px 25px;
+  padding: 12px 22px;
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 10px;
+  transition: 0.3s;
 }
 
 button:hover,
 button:focus {
   background: #e84767;
+  transform: scale(1.05);
 }
 
 /* CONTACT */
@@ -236,7 +260,7 @@ button:focus {
   background: #ff5c7a;
   color: white;
   text-align: center;
-  padding: 70px 20px;
+  padding: 60px 20px;
 }
 
 .contact-section a {
@@ -254,12 +278,32 @@ footer {
   background: #222;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 18px;
 }
 
 /* =========================
-   RESPONSIVE FIXES
+   RESPONSIVE DESIGN
    ========================= */
+
+/* Mobile (small phones) */
+@media (max-width: 480px) {
+  .hero-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .logo-image {
+    width: 150px;
+    height: 150px;
+  }
+}
 
 /* Tablets */
 @media (min-width: 768px) {
@@ -267,14 +311,29 @@ footer {
     font-size: 2.8rem;
   }
 
-  .navbar {
-    padding: 20px 10%;
+  .about-section {
+    padding: 90px 10%;
   }
 }
 
 /* Laptops */
 @media (min-width: 1024px) {
   .hero-content h2 {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
+  }
+
+  .menu-section {
+    padding: 100px 10%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+  .hero-content h2 {
+    font-size: 3.8rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
