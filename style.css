@@ -323,6 +323,11 @@ button:focus {
   object-fit: cover;
 }
 
+.product-info {
+  flex: 1;
+  min-width: 250px;
+}
+
 /* EXTRAS */
 .order-extras {
   background: white;
